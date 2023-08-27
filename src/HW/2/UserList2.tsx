@@ -11,13 +11,15 @@ export const UserList2 = (props: UserList2PropsType) => {
 		<div id={'hw02-users'}>
 			<h2>User List:</h2>
 
-			<button id={'hw02-filter-button'} onClick={() => props.filterUsers()}>SHOW ME FRIENDS FROM LA</button>
+			<button id={'hw02-filter-button'} onClick={() => props.filterUsers()}>
+				SHOW ME FRIENDS FROM LA
+			</button>
 
 			<ul>
-			  {props.users.myFriends.map((el, index) => {
+			  {props.users.myFriends.map(el => {
 				  return (
-					  <li key={index}>
-						  {el.name} from {el.address.city}
+					  <li key={el.id}>
+						 {el.name}, {el.age} years old from {el.address.street}, {el.address.city}
 					  </li>
 				  )
 			  })}
