@@ -18,9 +18,7 @@ export const UserList2 = (props: UserList2PropsType) => {
 			<ul>
 			  {props.users.myFriends.map(el => {
 				  return (
-					  <li key={el.id}>
-						 {el.name}, {el.age} years old from {el.address.street}, {el.address.city}
-					  </li>
+					  <CurrentUser key={el.id} user={el}/>
 				  )
 			  })}
 			</ul>
